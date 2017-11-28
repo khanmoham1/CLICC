@@ -5,16 +5,20 @@ html{
 body {
 	font-family: 'Rubik', sans-serif;
 	font-weight: 300;
-	background-color: #faf1e7;
 }
 
 header {
 	margin: 0px;
 	padding: 0px;
-	width: 100%
+	z-index: 100000;
+	width:100%;
+	top: 0;
+	position: fixed;
+	background-color: #faf1e7;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-header .row,
+header .navRow,
 footer .row {
 	display: flex;
 	align-items: center;
@@ -23,6 +27,7 @@ footer .row {
 
 header h1 {
 	font-weight: 700;
+	left: 10px;
 	margin: 0;
 }
 
@@ -44,6 +49,29 @@ header div {
 header p {
 	padding: 0 20px;
 	margin: 0;
+	font-size: 16px; font-size: 1.6rem;
+}
+
+header .navlink{
+	width: 100px;
+	text-align: center;
+	-webkit-transition: 0.5s; /* Safari */
+  transition: 0.5s;
+}
+
+header .navlink:hover{
+		background-color: #ECE0D2;
+}
+
+
+p#catalog{
+	border-right: 1px #D72638;
+}
+p#apply{
+	border-right: 1px #46A93E;
+}
+p#about{
+	border-right: 1px #00B5FF;
 }
 
 .s1Background {
@@ -51,6 +79,9 @@ header p {
 	height: 100%;
 	background-size: cover;
 	background-image: url('https://images.unsplash.com/photo-1472162072942-cd5147eb3902?dpr=1&auto=compress,format&fit=crop&w=1500&h=&q=80&cs=tinysrgb&crop=');
+	-moz-box-shadow:    inset 0 0 10px rgba(0,0,0,0.8);
+	-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+	box-shadow:         inset 0 0 10px rgba(0,0,0,0.8);
 }
 
 .parallax {
@@ -80,16 +111,6 @@ header p {
 	color: #46A93E;
 }
 
-/*.stroke {
-	color: black;
-	-webkit-text-stroke: 1px black;
-	text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-}*/
-
 .col-md-6 {
 	margin: 0 0 30px;
 }
@@ -97,12 +118,13 @@ header p {
 .btn.btn-primary {
 	font-family: 'eczar', serif;
 	border-radius: 2px;
-	border-style: solid;
-	border-width: 2px;
-	border-color: #46A93E;
-	color: #46A93E;
+	border: solid 2px #46A93E;
+	font-size: 16px;font-size: 1.6rem;
+	color: #ffffff;
 	text-shadow: none;
-	background-color: transparent;
+	background-color: rgba(0,0,0,0.2);
+	-webkit-transition: 0.5s; /* Safari */
+  transition: 0.5s;
 }
 
 .btn.btn-primary:hover {
@@ -143,12 +165,15 @@ header p {
 	height: 100%;
 	background-size: cover;
 	background-image: url('https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&w=1500&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+	-moz-box-shadow:    inset 0 0 10px rgba(0,0,0,0.8);
+	-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+	box-shadow:         inset 0 0 10px rgba(0,0,0,0.8);
 }
 
 .mentor {
 	font-family: 'Poppins', sans-serif;
 	text-align: center;
-	color: #248EB9;
+	color: #00B5FF;
 	width: 40%;
 	opacity: 1;
   filter: alpha(opacity=100); /* For IE8 and earlier */
@@ -156,7 +181,7 @@ header p {
 	float: left;
 	margin: auto;
 	padding: 2.0rem;
-	background-color: rgba(46,32,32,0.75);
+	background-color: rgba(0,0,0,0.5);
 }
 
 .mentor h2{
@@ -170,11 +195,10 @@ header p {
 
 .s4Background {
 	width: 100%;
-
 	background-color: #46A93E;
 }
 
-.s4Background div{
+.s4Background .books_title{
 	display: inline;
 	align-items: center;
 }
@@ -184,7 +208,6 @@ header p {
 	text-align: center;
 	color: white;
 	height: 20%;
-	white-space:nowrap;
 }
 
 .books_title h2{
@@ -197,10 +220,12 @@ header p {
 	overflow-y: hidden;
 	overflow-x: scroll;
 	-webkit-overflow-scrolling: touch;
-}
-
-#scroll{
-	width: 100%;
+	display: flex;
+	background-color: rgba(0,0,0,0.5);
+	margin-bottom: 20px;
+	-moz-box-shadow:    inset 0 0 10px rgba(0,0,0,0.8);
+	-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+	box-shadow:         inset 0 0 10px rgba(0,0,0,0.8);
 }
 
 .book_popular{
@@ -208,6 +233,20 @@ header p {
 	height: 30.0rem;
 	width: 20.0rem;
 	display: inline;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.books_popular a:hover{
+	text-decoration: none;
+}
+
+#seeAll{
+	background-color: rgba(0, 0, 0, 0.5);
+	font-size: 32px;font-size: 3.2rem;
+	color: white;
+	display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .s5Background{
@@ -215,6 +254,9 @@ header p {
 	height: 500px;
 	background-size: cover;
 	background-image: url('https://images.unsplash.com/photo-1432821596592-e2c18b78144f?dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D');
+	-moz-box-shadow:    inset 0 0 10px rgba(0,0,0,0.8);
+	-webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.8);
+	box-shadow:         inset 0 0 10px rgba(0,0,0,0.8);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -229,7 +271,8 @@ header p {
 	height: 100%;
 	margin: auto;
 	padding: 2.0rem;
-	background-color: rgba(46,32,32,0.5);
+	background-color: rgba(0,0,0,0.5);
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #fade-quote-carousel.carousel {
@@ -258,12 +301,6 @@ header p {
     text-align: center;
     border: none;
 }
-#fade-quote-carousel .profile-circle {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto;
-    border-radius: 100px;
-}
 
 .btn-secondary {
 	background-color: #E8DFE0;
@@ -271,28 +308,76 @@ header p {
 	margin: 0 0 30px;
 }
 
-footer {
+.footer-distributed{
+	background-color: #000000;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
 	width: 100%;
-	background-color: black;
-	font-size: 12px;font-size: 1.2rem;
-	padding: 20px 0;
+	text-align: left;
+	font: normal 16px sans-serif;
+
+	padding: 45px 50px;
 }
 
-footer .col-sm-8 {
-	display: flex;
-	justify-content: flex-end;
+.footer-distributed .footer-left p{
+	color:  #8f9296;
+	font-size: 14px;
+	margin: 0;
 }
 
-footer ul {
-	list-style: none;
+/* Footer links */
+
+.footer-distributed p.footer-links{
+	font-size:18px;
+	font-weight: bold;
+	color:  #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
 }
 
-footer li img {
-	width: 32px;
-	height: 32px;
+.footer-distributed p.footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
 }
 
-.gwd-header-dhg4 {
-	top: 0px;
-	left: 118px;
+.footer-distributed .footer-right{
+	float: right;
+	margin-top: 6px;
+	max-width: 180px;
+}
+
+.footer-distributed .footer-right a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background-color:  #33383b;
+	border-radius: 2px;
+
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+
+	margin-left: 3px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 600px) {
+
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-right{
+		text-align: center;
+	}
+
+	.footer-distributed .footer-right{
+		float: none;
+		margin: 0 auto 20px;
+	}
+
+	.footer-distributed .footer-left p.footer-links{
+		line-height: 1.8;
+	}
 }
