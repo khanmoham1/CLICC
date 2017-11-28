@@ -4,17 +4,34 @@
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <title>CLICC</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Eczar%7CPoppins%7CRubik" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Eczar%7CPoppins%7CRubik"
+ rel="stylesheet">
     <link title="CLICC CSS" href="CLICC%20CSS.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="js/jquery.js" type="text/javascript"></script>
   </head>
   <body>
-    <header class="container gwd-header-dhg4 gwd-header-wrxm gwd-new-class-16fv">
-      <div class="row">
+    <header class="gwd-header-wrxm gwd-new-class-16fv">
+      <div class="navRow">
         <h1 class="col-sm-8">CLICC</h1>
         <nav class="col-sm-4 nav">
-          <p>resources</p>
-          <p>apply</p>
-          <p>about</p>
+          <div class="navlink">
+            <a href="catalog.html">
+              <p id="catalog">catalog</p>
+            </a>
+          </div>
+          <div class="navlink">
+            <a>
+              <p id="apply">apply</p>
+            </a>
+          </div>
+          <div class="navlink">
+            <a href="about.html">
+              <p id="about">about</p>
+            </a>
+          </div>
         </nav>
       </div>
     </header>
@@ -44,22 +61,102 @@
       </div>
     </section>
     <section class="container s4Background">
-      <div>
-        <div class="books">
-          <h2>PlaceHolder</h2>
+      <div class="books_title">
+        <h2>Popular Books</h2>
+      </div>
+      <div class="books_popular">
+        <div>
+          <a href="#"><img class="book_popular" src="images\Popular_Books\9780399555503_lg.gif"/></a>
+        </div>
+        <div>
+          <a href="#"><img class="book_popular" src="images\Popular_Books\9780545230506_lg.gif"/></a>
+        </div>
+        <div>
+          <a href="#"><img class="book_popular" src="images\Popular_Books\9780545403306_lg.gif"/></a>
+        </div>
+        <div>
+          <a href="#"><img class="book_popular" src="images\Popular_Books\9780545652209_lg.gif"/></a>
+        </div>
+        <div>
+          <a href="#"><img class="book_popular" src="images\Popular_Books\9780553259209_lg.gif"/></a>
+        </div>
+        <div>
+          <a href="#"><img class="book_popular" src="images\Popular_Books\9781338114409_lg.gif"/></a>
+        </div>
+        <div>
+          <a href="catalog.html"><div id="seeAll" class="book_popular">See All Books...</div></a>
         </div>
       </div>
     </section>
-    <section class="container s5Background parallax">
+    <section class="container s5Background parallax carousel">
       <div>
         <div class="testimonials">
-          <h2>PlaceHolder</h2>
+          <div class="quote"><i class="fa fa-quote-left fa-4x"></i></div>
+          <div class="carousel slide" id="fade-quote-carousel" data-ride="carousel" data-interval="3000">
+				  <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+  				    <li data-target="#fade-quote-carousel" data-slide-to="0" class="active"></li>
+  				    <li data-target="#fade-quote-carousel" data-slide-to="1"></li>
+  				    <li data-target="#fade-quote-carousel" data-slide-to="2"></li>
+              <li data-target="#fade-quote-carousel" data-slide-to="3"></li>
+              <li data-target="#fade-quote-carousel" data-slide-to="4"></li>
+              <li data-target="#fade-quote-carousel" data-slide-to="5"></li>
+  				  </ol>
+    			  <!-- Carousel items -->
+    			  <div class="carousel-inner">
+    			    <div class="active item">
+    			    	<blockquote>
+    			    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+    			    	</blockquote>
+    			    </div>
+  				    <div class="item">
+  				    	<blockquote>
+  				    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+  				    	</blockquote>
+  				    </div>
+  				    <div class="item">
+  				    	<blockquote>
+  				    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+  				    	</blockquote>
+  				    </div>
+              <div class="item">
+    			    	<blockquote>
+  				    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+  				    	</blockquote>
+  				    </div>
+              <div class="item">
+    			    	<blockquote>
+	    		        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+  			    	  </blockquote>
+              </div>
+              <div class="item">
+      	        <blockquote>
+      		          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, veritatis nulla eum laudantium totam tempore optio doloremque laboriosam quas, quos eaque molestias odio aut eius animi. Impedit temporibus nisi accusamus.</p>
+    	           </blockquote>
+  				    </div>
+  				  </div>
+		      </div>
         </div>
       </div>
     </section>
-    <footer>
-      <p>about us</p>
-      <p>circa 1990</p>  
-    </footer>
+    <footer class="footer-distributed">
+			<div class="footer-right">
+				<a href="#"><i class="fa fa-facebook"></i></a>
+				<a href="#"><i class="fa fa-twitter"></i></a>
+				<a href="#"><i class="fa fa-linkedin"></i></a>
+			</div>
+			<div class="footer-left">
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="catalog.html">Catalog</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+				<p>CLICC &copy; 1990</p>
+			</div>
+		</footer>
   </body>
 </html>
