@@ -73,16 +73,6 @@ header .navlink:hover{
 	background-color: #ECE0D2;
 }
 
-p#catalog{
-	border-right: 1px #D72638;
-}
-p#apply{
-	border-right: 1px #46A93E;
-}
-p#about{
-	border-right: 1px #00B5FF;
-}
-
 /*----------------------------*/
 
 /*-------index.html-------*/
@@ -361,6 +351,8 @@ p#about{
 	border-bottom: 1px solid #ebebeb;
 	border-right: 1px solid #ebebeb;
 	padding: 0 0 70px 0;
+    height: 40.0rem;
+    min-height: 40.0rem;
 }
 .articles .columnCont{
 	text-align: center;
@@ -593,10 +585,13 @@ line-height: 26px;
 
 /*-------FOOTER-------*/
 .footer-distributed{
-	background-color: #000000;
+	position: absolute;
+    min-height: 150px; min-height: 15.0rem;
+    height: 150px; height: 15.0rem;
+    background-color: #000000;
+    background-size: cover
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
-	/*height: 150px;height: 15.0rem;*/
 	width: 100%;
 	text-align: left;
 	font: normal 16px sans-serif;
@@ -638,7 +633,6 @@ line-height: 26px;
 	height: 35px;
 	background-color:  #33383b;
 	border-radius: 2px;
-
 	font-size: 20px;
 	color: #ffffff;
 	text-align: center;
@@ -665,3 +659,5 @@ line-height: 26px;
 		line-height: 1.8;
 	}
 }
+
+
